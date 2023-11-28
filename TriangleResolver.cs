@@ -20,13 +20,13 @@
             var pow2 = Math.Pow(side2, 2);
             var pow3 = Math.Pow(side3, 2);
 
-            if (Equals(pow1, pow2 + pow3) || Equals(pow2, pow1 + pow3) || Equals(pow3, pow1 + pow2)) // По теореме Пифагора в Прямоугольном треугольнике квадрат гипотенузы равен сумме квадратов катетов, т.е. 
+            if (Equals(pow1, pow2 + pow3) || Equals(pow2, pow1 + pow3) || Equals(pow3, pow1 + pow2)) // По теореме Пифагора в Прямоугольном треугольнике квадрат гипотенузы равен сумме квадратов катетов
                 return TriangleType.Right;
 
-            if (pow1 > pow2 + pow3 || pow2 > pow1 + pow3 || pow3 > pow1 + pow2) // Если квадрат гипотенузы больше суммы квадратов других сторон, противолежащий угол имеет более 90 градусов, т.е. треугольник Тупой
+            if (pow1 > pow2 + pow3 || pow2 > pow1 + pow3 || pow3 > pow1 + pow2) // Если квадрат гипотенузы больше суммы квадратов других сторон, противолежащий угол имеет более 90 градусов, т.е. треугольник Тупоугольный
                 return TriangleType.Obtuse;
 
-            return TriangleType.Acute; // Иначе треугольник Острый
+            return TriangleType.Acute; // Иначе треугольник Остроугольный
         }
     }
 }
